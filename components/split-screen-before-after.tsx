@@ -13,6 +13,7 @@ export function SplitScreenBeforeAfter() {
   const [serviceInView, setServiceInView] = useState(false)
   const [tyreKickersInView, setTyreKickersInView] = useState(false)
   const [scrollY, setScrollY] = useState(0)
+  const [isNarrowViewport, setIsNarrowViewport] = useState(false)
   const [pulseBarStyles, setPulseBarStyles] = useState<{ height: string; animation: string }[]>([])
   const sectionRef = useRef<HTMLDivElement>(null)
   const whatsappSectionRef = useRef<HTMLDivElement>(null)
@@ -77,7 +78,9 @@ export function SplitScreenBeforeAfter() {
       if (window.innerWidth < 1024) {
         setScrollY(0)
       }
+      setIsNarrowViewport(window.innerWidth < 1024)
     }
+    setIsNarrowViewport(typeof window !== "undefined" && window.innerWidth < 1024)
     window.addEventListener("resize", handleResize)
 
     return () => {
@@ -110,6 +113,8 @@ export function SplitScreenBeforeAfter() {
   // eslint-disable-next-line react-hooks/refs -- parallax computed from refs for layout; safe for this component
   const voiceParallax = getParallaxOffset(voiceSectionRef)
 
+  const showFirstSection = sectionInView || isNarrowViewport
+
   return (
     <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 relative z-10">
       <div>
@@ -117,7 +122,7 @@ export function SplitScreenBeforeAfter() {
           <div className="grid lg:grid-cols-[40%_1fr] gap-8 lg:gap-12 items-center">
             <div
               className={`transition-all duration-1000 ease-out ${
-                sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                showFirstSection ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
@@ -132,7 +137,7 @@ export function SplitScreenBeforeAfter() {
 
             <div
               className={`transition-all duration-1000 ease-out delay-200 ${
-                sectionInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                showFirstSection ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-100 to-red-100 border border-orange-200 mb-4">
