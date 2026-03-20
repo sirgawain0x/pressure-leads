@@ -66,14 +66,13 @@ export function AiTeamDealershipSection() {
               AI Working 24/7 - Never Miss a Lead
             </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 tracking-tight">
-              Your AI Team{" "}
+              Our Pressure{" "}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                Never Sleeps
+              Washing Services
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Watch our AI handle real customer interactions around the clock, automatically qualifying leads and
-              booking appointments while you focus on growing your dealership.
+              We clean homes, driveways, roofs & outdoor spaces across St. Augustine & nearby areas.
             </p>
           </div>
 
@@ -97,7 +96,7 @@ export function AiTeamDealershipSection() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900">24/7 AI Chat Support</h3>
+                    <h3 className="text-lg font-bold text-slate-900">Driveway Cleaning</h3>
                     <p className="text-xs text-slate-500">Multi-channel messaging</p>
                   </div>
                 </div>

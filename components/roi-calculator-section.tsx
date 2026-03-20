@@ -251,7 +251,7 @@ export function ROICalculatorSection() {
                       <div>
                         <p className="text-sm text-gray-300">
                           <span className="font-medium text-white">Customer satisfaction:</span> Increases by{" "}
-                          {businessConfig.satisfaction}% with 24/7 AI support
+                          {businessConfig.satisfaction}% with our professional pressure washing services
                         </p>
                       </div>
                     </div>

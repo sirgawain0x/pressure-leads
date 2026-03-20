@@ -6,11 +6,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 const navigation = [
-  { name: "Features", href: "/#features" },
-  { name: "AI Team", href: "/#ai-team" },
-  { name: "Testimonials", href: "/#testimonials" },
-  { name: "ROI Calculator", href: "/#roi-calculator" },
-  { name: "Partners", href: "/partners" },
+  { name: "Services", href: "/#features" },
+  { name: "Reviews", href: "/#testimonials" },
+  { name: "Contact", href: "/#contact" },
+  // { name: "ROI Calculator", href: "/#roi-calculator" },
+  // { name: "Partners", href: "/partners" },
 ]
 
 export function GlassmorphismNav() {
@@ -155,7 +155,7 @@ export function GlassmorphismNav() {
                   className="relative bg-white hover:bg-gray-50 text-black font-medium px-6 py-2 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
                   onClick={() => scrollToSection("#contact")}
                 >
-                  <span className="mr-2">Get Started</span>
+                  <span className="mr-2">Get Free Quote</span>
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
@@ -242,7 +242,7 @@ export function GlassmorphismNav() {
                   }}
                   onClick={() => scrollToSection("#contact")}
                 >
-                  <span className="mr-2">Get Started</span>
+                  <span className="mr-2">Get Free Quote</span>
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>

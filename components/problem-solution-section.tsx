@@ -66,7 +66,7 @@ export function ProblemSolutionSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 sm:py-24 px-4 relative z-10">
+    <section id="about" ref={sectionRef} className="py-16 sm:py-24 px-4 relative z-10">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div
@@ -74,16 +74,16 @@ export function ProblemSolutionSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6">
+          {/* <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-red-400 rounded-full mr-2 animate-pulse"></span>
             The Problem Every Business Faces
-          </div>
+          </div> */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-balance mb-4 sm:mb-6">
-            <span className="text-red-400">60-70%</span> of Your Leads Are Slipping Away
+            <span className="text-red-400">See the Difference</span> Professional Pressure Washing Makes
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+          {/* <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
             While you're busy serving customers, your online inquiries are going unanswered. Here's how we fix it.
-          </p>
+          </p> */}
         </div>
 
         {/* Main Problem/Solution Cards */}
@@ -99,14 +99,14 @@ export function ProblemSolutionSection() {
                 <div className="p-2 rounded-lg bg-red-500/20">
                   <AlertTriangle />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-red-400">The Reality</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-red-400">BEFORE</h3>
               </div>
 
               {/* Key Stat */}
               <div className="bg-red-500/10 backdrop-blur-sm border border-red-500/20 rounded-xl p-4 sm:p-6 mb-6">
-                <div className="text-3xl sm:text-4xl font-bold text-red-400 mb-2">4+ Hours</div>
+                <div className="text-3xl sm:text-4xl font-bold text-red-400 mb-2">Before Cleaning</div>
                 <p className="text-white/80 text-sm sm:text-base">
-                  Average response time, but 78% of customers choose the first business to respond
+                  Dirty & Stained Surfaces
                 </p>
               </div>
 
@@ -115,18 +115,22 @@ export function ProblemSolutionSection() {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-white/70 text-sm sm:text-base">
-                    Staff miss inquiries during off-hours and weekends
+                    Driveways covered in dirt and oil stains
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-white/70 text-sm sm:text-base">
-                    Busy serving customers while online leads go cold
+                    Mold and mildew on siding
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-white/70 text-sm sm:text-base">Marketing spend wasted on unresponded inquiries</p>
+                  <p className="text-white/70 text-sm sm:text-base">Dark streaks on roofs</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-white/70 text-sm sm:text-base">Weathered patios and decks</p>
                 </div>
               </div>
             </div>
@@ -139,14 +143,14 @@ export function ProblemSolutionSection() {
                 <div className="p-2 rounded-lg bg-green-500/20">
                   <CheckCircle />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-green-400">Our Solution</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-green-400">AFTER</h3>
               </div>
 
               {/* Key Stat */}
               <div className="bg-green-500/10 backdrop-blur-sm border border-green-500/20 rounded-xl p-4 sm:p-6 mb-6">
-                <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-2">After Cleaning</div>
                 <p className="text-white/80 text-sm sm:text-base">
-                  AI assistant responds within seconds, books appointments while you sleep
+                Clean, Bright & Like New
                 </p>
               </div>
 
@@ -154,15 +158,19 @@ export function ProblemSolutionSection() {
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle />
-                  <p className="text-white/70 text-sm sm:text-base">Instantly qualifies leads and books appointments</p>
+                  <p className="text-white/70 text-sm sm:text-base">Driveways restored to original look</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle />
-                  <p className="text-white/70 text-sm sm:text-base">Integrates with your CRM and calendar system</p>
+                  <p className="text-white/70 text-sm sm:text-base">Homes look fresh and well maintained</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle />
-                  <p className="text-white/70 text-sm sm:text-base">Works across website, WhatsApp, email, and phone</p>
+                  <p className="text-white/70 text-sm sm:text-base">Roof stains safely removed</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle />
+                  <p className="text-white/70 text-sm sm:text-base">Outdoor spaces look brand new</p>
                 </div>
               </div>
             </div>
@@ -176,16 +184,16 @@ export function ProblemSolutionSection() {
           }`}
         >
           <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all duration-300">
-            <div className="text-2xl sm:text-3xl font-bold text-white mb-2">$576+</div>
-            <p className="text-white/70 text-xs sm:text-sm">Average value per lost lead</p>
+            <div className="text-2xl sm:text-3xl font-bold text-white mb-2">Fast Turnaround</div>
+            <p className="text-white/70 text-xs sm:text-sm">Same-day quotes available</p>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all duration-300">
-            <div className="text-2xl sm:text-3xl font-bold text-white mb-2">78%</div>
-            <p className="text-white/70 text-xs sm:text-sm">Choose first responder</p>
+            <div className="text-2xl sm:text-3xl font-bold text-white mb-2">Local Service</div>
+            <p className="text-white/70 text-xs sm:text-sm">Serving St. Augustine & nearby areas</p>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 sm:p-6 hover:bg-white/10 transition-all duration-300">
-            <div className="text-2xl sm:text-3xl font-bold text-white mb-2">24/7</div>
-            <p className="text-white/70 text-xs sm:text-sm">Our AI never sleeps</p>
+            <div className="text-2xl sm:text-3xl font-bold text-white mb-2">Reliable Results</div>
+            <p className="text-white/70 text-xs sm:text-sm">Consistent, high-quality cleaning</p>
           </div>
         </div>
 
@@ -196,16 +204,16 @@ export function ProblemSolutionSection() {
           }`}
         >
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 text-balance">
-            Stop Losing Customers Today
+            Get Your Free Pressure Washing Quote Today
           </h3>
           <p className="text-sm sm:text-base md:text-lg text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-            Get a free response time audit and see exactly how many leads you're missing right now.
+            Takes less than 30 seconds. Fast response guaranteed.
           </p>
           <Button
             size="lg"
             className="bg-white text-black rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer"
           >
-            Get Free Response Audit
+            Get My Free Quote
             <ArrowRight />
           </Button>
         </div>

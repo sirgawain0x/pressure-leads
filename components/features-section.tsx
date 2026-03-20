@@ -368,44 +368,44 @@ const AnimatedIntegrationsDemo = ({ isActive }: { isActive: boolean }) => {
 
 const features = [
   {
-    title: "24/7 AI Chat Support",
+    title: "Driveway Cleaning",
     description:
-      "Intelligent chatbots that handle customer inquiries, answer questions, and capture leads across your website and social channels.",
+      "Removes dirt, oil stains, and buildup to restore your driveway.",
     demo: AnimatedChatDemo,
     size: "large",
   },
   {
-    title: "AI Phone Receptionist",
+    title: "House Washing",
     description:
-      "Professional AI voice assistant that answers calls, takes messages, and books appointments when you're busy or closed.",
+      "Safely cleans siding, removing mold, mildew, and grime.",
     demo: AnimatedPhoneDemo,
     size: "medium",
   },
   {
-    title: "Smart Appointment Booking",
+    title: "Roof Soft Wash",
     description:
-      "Automated scheduling system that checks availability, books appointments, and sends confirmations without human intervention.",
+      "Gently removes black streaks and algae without damage.",
     demo: AnimatedCalendarDemo,
     size: "medium",
   },
   {
-    title: "Email Response Automation",
+    title: "Patio & Deck Cleaning",
     description:
-      "AI-powered email assistant that responds to inquiries, provides information, and forwards complex queries to your team.",
+      "Brings outdoor spaces back to life for a fresh, clean look.",
     demo: AnimatedEmailDemo,
     size: "large",
   },
   {
-    title: "Lead Qualification & Handoff",
+    title: "Fence Cleaning",
     description:
-      "Intelligent system that qualifies prospects, gathers key information, and seamlessly hands off hot leads to your sales team.",
+      "Restores wood and vinyl fences to their original appearance.",
     demo: AnimatedLeadsDemo,
     size: "medium",
   },
   {
-    title: "Multi-Platform Integration",
+    title: "Commercial Cleaning",
     description:
-      "Connect with your existing tools including CRM, calendar, WhatsApp, SMS, and more for a unified customer experience.",
+      "Keep storefronts and properties clean and professional",
     demo: AnimatedIntegrationsDemo,
     size: "medium",
   },
@@ -483,14 +483,14 @@ export function FeaturesSection() {
               AI Working 24/7 - Never Miss a Lead
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 text-balance mb-4 sm:mb-6">
-              Your AI Team{" "}
+            Our Pressure{" "}
               <span className="bg-gradient-to-r from-slate-600 to-slate-400 bg-clip-text text-transparent">
-                Never Sleeps
+              Washing Services
               </span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-              Watch our AI handle real customer interactions around the clock, automatically qualifying leads and
-              booking appointments while you focus on growing your business.
+            We clean homes, driveways, roofs & outdoor spaces across St. Augustine
+
             </p>
           </div>
 
