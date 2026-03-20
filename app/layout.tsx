@@ -20,9 +20,9 @@ const caveat = Caveat({
 })
 
 export const metadata: Metadata = {
-  title: "Cliste - AI Automation for Enterprise",
+  title: "St. Augustine Pressure Washing Pros",
   description:
-    "Transform your business with intelligent AI automation solutions. Empower your organization to operate at the speed of thought.",
+    "Get your pressure washing service scheduled quickly and easily. From your first question to a fast quote and booking, every step is handled quickly so you can get your home cleaned without the wait.",
   generator: "v0.app",
 }
 
