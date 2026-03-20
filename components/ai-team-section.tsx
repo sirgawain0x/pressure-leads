@@ -206,7 +206,7 @@ export function AITeamSection() {
               }`}
             >
               <MessageCircle className="w-4 h-4" />
-              AI Pressure Washing Assistant Demo
+              Pressure Washing Inquiries
             </div>
 
             <h2
@@ -214,9 +214,9 @@ export function AITeamSection() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              See AI Handle{" "}
+              How We Handle{" "}
               <span className="bg-gradient-to-r from-slate-600 to-slate-400 bg-clip-text text-transparent">
-                Real Pressure Washing Sales
+                Pressure Washing Inquiries
               </span>
             </h2>
 
@@ -225,7 +225,7 @@ export function AITeamSection() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Watch how our AI handles pressure washing inquiries, generates quotes, and provides 24/7 support.
+              Watch how we handle pressure washing inquiries, generate quotes, and provide 24/7 support.
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export function AITeamSection() {
                         <div className="bg-slate-50 px-6 py-3 flex justify-between items-center text-sm">
                           <div className="flex items-center gap-1">
                             <div className="w-2 h-2 bg-slate-900 rounded-full"></div>
-                            <span className="font-medium text-slate-700">Pressure Washing AI</span>
+                            <span className="font-medium text-slate-700">Pressure Washing Service</span>
                           </div>
                           <div className="flex items-center gap-1 text-slate-500">
                             <Clock className="w-3 h-3" />
@@ -306,7 +306,7 @@ export function AITeamSection() {
                               className="w-8 h-8 rounded-full object-cover mr-2 mt-1 flex-shrink-0"
                             />
                             <div className="flex-1">
-                              <h3 className="font-semibold text-sm">Atlas - AI Sales Agent</h3>
+                              <h3 className="font-semibold text-sm">Atlas - Sales Agent</h3>
                               <p className="text-xs text-slate-300">Chat with 904 234 5678</p>
                             </div>
                             <div className="text-xs text-green-400 flex items-center gap-1">

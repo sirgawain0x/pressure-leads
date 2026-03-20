@@ -1,11 +1,12 @@
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { HeroSection } from "@/components/hero-section"
+import { BeforeAfterGallerySection } from "@/components/before-after-gallery-section"
 import { ProblemSolutionSection } from "@/components/problem-solution-section"
 import Aurora from "@/components/Aurora"
 import { FeaturesSection } from "@/components/features-section"
 import { AITeamSection } from "@/components/ai-team-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
-import { ROICalculatorSection } from "@/components/roi-calculator-section"
+// import { ROICalculatorSection } from "@/components/roi-calculator-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
@@ -19,11 +20,12 @@ export default function HomePage() {
         <div className="relative z-10">
           <GlassmorphismNav />
           <HeroSection />
+          <BeforeAfterGallerySection />
           <ProblemSolutionSection />
           <FeaturesSection />
           <AITeamSection />
           <TestimonialsSection />
-          <ROICalculatorSection />
+          {/* <ROICalculatorSection /> */}
           <CTASection />
           <Footer />
         </div>

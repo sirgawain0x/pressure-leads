@@ -7,7 +7,8 @@ import Image from "next/image"
 
 interface FooterLink {
   title: string
-  href: string
+  /** Omit for non-interactive rows (e.g. hours). */
+  href?: string
   icon?: React.ComponentType<{ className?: string }>
 }
 
@@ -18,38 +19,46 @@ interface FooterSection {
 
 const footerLinks: FooterSection[] = [
   {
-    label: "Product",
+    label: "Services",
     links: [
-      { title: "Features", href: "/features" },
-      { title: "AI Team", href: "/ai-team" },
-      { title: "ROI Calculator", href: "/roi-calculator" },
-      { title: "Integration", href: "/integration" },
+      { title: "House Washing", href: "/#features" },
+      { title: "Driveway Cleaning", href: "/#features" },
+      { title: "Roof Cleaning", href: "/#features" },
+      { title: "Patio & Deck Cleaning", href: "/#features" },
     ],
   },
   {
     label: "Company",
     links: [
-      { title: "About Us", href: "/about" },
-      { title: "Contact", href: "/contact" },
-      { title: "Privacy Policy", href: "/privacy" },
-      { title: "Terms of Service", href: "/terms" },
+      { title: "About", href: "/#about" },
+      { title: "Testimonials", href: "/#testimonials" },
+      
     ],
   },
   {
-    label: "Resources",
+    label: "Contact",
     links: [
-      { title: "Blog", href: "/blog" },
-      { title: "Case Studies", href: "/case-studies" },
-      { title: "Documentation", href: "/docs" },
-      { title: "Support", href: "/support" },
+      {
+        title: "Service areas (St. Augustine, St. Johns, & more)",
+        href: "/#contact",
+      },
+      {
+        title: "(904) XXX-XXXX",
+        href: "tel:+19045551234",
+      },
+      {
+        title: "hello@pressureleads.com",
+        href: "mailto:hello@pressureleads.com",
+      },
+      { title: "Mon–Sat · 8am–6pm" },
     ],
   },
   {
-    label: "Social Links",
+    label: "Social",
     links: [
       { title: "Facebook", href: "#", icon: FacebookIcon },
-          { title: "Instagram", href: "#", icon: Instagram },
-          { title: "Youtube", href: "#", icon: Youtube },
+      { title: "Instagram", href: "#", icon: Instagram },
+      { title: "Youtube", href: "#", icon: Youtube },
       { title: "LinkedIn", href: "#", icon: LinkedinIcon },
     ],
   },
@@ -64,7 +73,7 @@ export function Footer() {
         <AnimatedContainer className="space-y-4">
           <Image src="/images/cliste-logo.png" alt="Cliste Logo" width={64} height={64} className="size-16" />
           <div className="text-muted-foreground mt-8 text-sm md:mt-0 md:block hidden">
-            <p>© {new Date().getFullYear()} Leads.ai. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} staugustinepressurewashingpros.com. All rights reserved.</p>
           </div>
         </AnimatedContainer>
 
@@ -76,13 +85,17 @@ export function Footer() {
                 <ul className="text-muted-foreground mt-4 space-y-2 text-sm">
                   {section.links.map((link) => (
                     <li key={link.title}>
-                      <a
-                        href={link.href}
-                        className="hover:text-foreground inline-flex items-center transition-all duration-300"
-                      >
-                        {link.icon && <link.icon className="me-1 size-4" />}
-                        {link.title}
-                      </a>
+                      {link.href ? (
+                        <a
+                          href={link.href}
+                          className="hover:text-foreground inline-flex items-center transition-all duration-300"
+                        >
+                          {link.icon && <link.icon className="me-1 size-4" />}
+                          {link.title}
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center">{link.title}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -93,12 +106,12 @@ export function Footer() {
       </div>
 
       <div className="md:hidden mt-8 text-center space-y-2">
-        <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} leads.ai. All rights reserved.</p>
-        <p className="text-muted-foreground text-xs">Web Development by Creative Platform, Inc.</p>
+        <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} staugustinepressurewashingpros.com. All rights reserved.</p>
+        <p className="text-muted-foreground text-xs">Serving St. Augustine & surrounding areas.</p>
       </div>
 
       <div className="hidden md:block mt-8 pt-6 border-t border-foreground/10 w-full">
-        <p className="text-muted-foreground text-xs text-center">Web Development by Creative Platform, Inc.</p>
+        <p className="text-muted-foreground text-xs text-center">Serving St. Augustine & surrounding areas.</p>
       </div>
     </footer>
   )

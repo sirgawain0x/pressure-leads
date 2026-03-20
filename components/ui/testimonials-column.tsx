@@ -8,6 +8,14 @@ interface Testimonial {
   role: string
 }
 
+function FiveStarRow({ className }: { className?: string }) {
+  return (
+    <div className={className} aria-hidden>
+      <span className="select-none text-[0.95rem] leading-none tracking-tight">⭐️⭐️⭐️⭐️⭐️</span>
+    </div>
+  )
+}
+
 export const TestimonialsColumn = (props: {
   className?: string
   testimonials: Testimonial[]
@@ -39,6 +47,7 @@ export const TestimonialsColumn = (props: {
                   }}
                   key={i}
                 >
+                  <FiveStarRow className="mb-4" />
                   <div className="text-gray-200 text-sm leading-relaxed">{text}</div>
                   <div className="mt-5">
                     <div className="font-medium tracking-tight leading-5 text-gray-100">{name}</div>

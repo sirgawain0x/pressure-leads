@@ -35,17 +35,17 @@ export function HeroSection() {
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8 mt-12 animate-fade-in-badge">
           <span className="w-2 h-2 bg-white/60 rounded-full mr-2 animate-pulse"></span>
-          AI Automation for Enterprise
+          Professional Pressure Washing
         </div>
 
         {/* Main Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-balance mb-6 animate-fade-in-heading">
-          <span className="text-foreground">Elevate your</span>
+          <span className="text-foreground">That Makes</span>
           <br />
           <span className="inline-flex items-center justify-center flex-wrap gap-2 mt-4 sm:mt-6 md:mt-8">
-            <span className="text-foreground">Business</span>
+            <span className="text-foreground">Your Home</span>
             <RotatingText
-              texts={["Growth", "Innovation", "Efficiency", "Success", "Performance"]}
+              texts={["Look New", "Shine Again", "Spotless"]}
               mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg shadow-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
@@ -60,8 +60,11 @@ export function HeroSection() {
         </h1>
 
         {/* Subheading */}
-        <p className="text-base sm:text-xl md:text-2xl text-white text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
-        Stop chasing cold leads and answering tire-kicker phone calls. Our AI agent qualifies local homeowners, handles the research, and routes booked jobs directly to you.
+        <p className="text-base sm:text-xl md:text-2xl text-white text-balance max-w-sm sm:max-w-3xl mx-auto mb-3 sm:mb-4 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-medium">
+        Driveways, homes, roofs & patios cleaned fast in St Augustine, FL.
+        </p>
+        <p className="text-base sm:text-lg md:text-xl text-white/90 text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
+          Limited availability this week — get your free quote now
         </p>
 
         {/* CTA Buttons */}
@@ -70,22 +73,22 @@ export function HeroSection() {
             size="lg"
             className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer relative overflow-hidden"
           >
-            Start Automating
+            Get My Free Quote
             <ArrowRight />
           </Button>
 
-          <Button
+          {/* <Button
             variant="outline"
             size="lg"
             className="rounded-full px-8 py-4 text-lg font-medium border-border hover:bg-accent transition-all duration-200 hover:scale-105 group bg-transparent cursor-pointer"
           >
             <Play />
             Watch Demo
-          </Button>
+          </Button> */}
         </div>
 
         {/* Trust Indicators */}
-        <div className="text-center px-4 hidden sm:block overflow-hidden animate-fade-in-trust">
+        {/* <div className="text-center px-4 hidden sm:block overflow-hidden animate-fade-in-trust">
           <p className="text-sm text-white mb-6">Trusted by innovative companies worldwide</p>
           <div className="relative overflow-hidden w-full max-w-4xl mx-auto">
             <div className="flex items-center gap-8 opacity-60 hover:opacity-80 transition-all duration-500 animate-slide-left">
@@ -96,9 +99,9 @@ export function HeroSection() {
                 <div className="text-base sm:text-lg font-semibold">AutoFlow</div>
                 <div className="text-base sm:text-lg font-semibold">eScale</div>
                 <div className="text-base sm:text-lg font-semibold">DataFlow</div>
-              </div>
+              </div> */}
               {/* Duplicate for seamless loop */}
-              <div className="flex items-center gap-8 whitespace-nowrap">
+              {/* <div className="flex items-center gap-8 whitespace-nowrap">
                 <div className="text-base sm:text-lg font-semibold">TechCorp</div>
                 <div className="text-base sm:text-lg font-semibold">InnovateLab</div>
                 <div className="text-base sm:text-lg font-semibold">FutureScale</div>
@@ -108,16 +111,16 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Mobile Trust Indicators */}
-        <div className="text-center px-4 mb-8 sm:hidden overflow-hidden animate-fade-in-trust">
+        {/* <div className="text-center px-4 mb-8 sm:hidden overflow-hidden animate-fade-in-trust">
           <p className="text-sm text-white mb-6">Trusted by innovative companies worldwide</p>
-          <div className="relative overflow-hidden w-full max-w-sm mx-auto">
+          <div className="relative overflow-hidden w-full max-w-sm mx-auto"> */}
             {/* Left blur fade */}
-            <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+            {/* <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div> */}
             {/* Right blur fade */}
-            <div className="absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+            {/* <div className="absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
             <div className="flex items-center gap-6 opacity-60 animate-slide-left-mobile">
               <div className="flex items-center gap-6 whitespace-nowrap">
                 <div className="text-sm font-semibold">TechCorp</div>
@@ -126,9 +129,9 @@ export function HeroSection() {
                 <div className="text-sm font-semibold">AutoFlow</div>
                 <div className="text-sm font-semibold">eScale</div>
                 <div className="text-sm font-semibold">DataFlow</div>
-              </div>
+              </div> */}
               {/* Duplicate for seamless loop */}
-              <div className="flex items-center gap-6 whitespace-nowrap">
+              {/* <div className="flex items-center gap-6 whitespace-nowrap">
                 <div className="text-sm font-semibold">TechCorp</div>
                 <div className="text-sm font-semibold">InnovateLab</div>
                 <div className="text-sm font-semibold">FutureScale</div>
@@ -136,10 +139,10 @@ export function HeroSection() {
                 <div className="text-sm font-semibold">eScale</div>
                 <div className="text-sm font-semibold">DataFlow</div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> */}
+          {/* </div>
+        </div>*/}
+      </div> 
     </section>
   )
 }

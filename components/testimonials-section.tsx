@@ -32,44 +32,44 @@ export function TestimonialsSection() {
 
   const testimonials = [
     {
-      text: "We went from missing 70% of after-hours inquiries to capturing every single lead. Customer bookings increased 50% in the first month.",
-      name: "Mike Rodriguez",
-      role: "Business Owner",
+      text: "We had years of buildup on our driveway and it looks brand new now. Super fast and professional.",
+      name: "Mike R.",
+      role: "St. Augustine, FL",
     },
     {
-      text: "We spend so much less time thinking about lead response because of the instant engagement Cliste offers us.",
-      name: "Sarah Chen",
-      role: "Sales Manager",
+      text: "Our house looks amazing after the wash. They showed up on time and got everything done the same day.",
+      name: "Sarah C.",
+      role: "Ponte Vedra, FL",
     },
     {
-      text: "With Cliste, our conversion rates increased by 85% and boosted our weekend revenue by 40%.",
-      name: "Michael Torres",
-      role: "General Manager",
+      text: "The roof cleaning made a huge difference. All the dark streaks are gone.",
+      name: "Michael T.",
+      role: "St. Johns",
     },
     {
-      text: "The AI handles customer questions 24/7, so we never miss a potential sale. Our team can focus on closing deals instead of answering basic questions.",
-      name: "Jennifer Walsh",
-      role: "Operations Director",
+      text: "Quick quote, great price, and the results were better than expected.",
+      name: "Jennifer W.",
+      role: "St. Augustine, FL",
     },
     {
-      text: "Customer satisfaction scores improved dramatically since implementing Cliste. Clients love the instant responses and personalized recommendations.",
-      name: "David Kim",
-      role: "Customer Experience Manager",
+      text: "They cleaned our patio and fence — everything looks fresh again.",
+      name: "David K",
+      role: "Jacksonville, FL",
     },
     {
-      text: "Our retail store saw a 60% increase in qualified leads. The chatbot handles product inquiries perfectly while we focus on in-person customers.",
-      name: "Lisa Thompson",
-      role: "Store Manager",
+      text: "Very easy process from start to finish. I’ll definitely use them again.",
+      name: "Lisa T.",
+      role: "St. Augustine, FL",
     },
     {
-      text: "Property inquiries are handled instantly now. We've closed 3x more deals since implementing Cliste's AI assistant.",
-      name: "James Wilson",
-      role: "Real Estate Broker",
+      text: "We didn’t realize how dirty everything had gotten until after the cleaning. The difference was night and day. They responded quickly, showed up on time, and got it done fast. Definitely using them again.",
+      name: "James W.",
+      role: "Jacksonville, FL",
     },
     {
-      text: "Hotel bookings increased 45% with 24/7 availability. Guests get immediate answers about amenities and availability.",
-      name: "Maria Garcia",
-      role: "Hospitality Manager",
+      text: "Booking was simple and they kept me updated the whole time. The house looks so much brighter now, especially the siding and back patio. You can tell they know what they’re doing.",
+      name: "Maria G.",
+      role: "Ponte Vedra, FL",
     },
   ]
 
@@ -98,10 +98,19 @@ export function TestimonialsSection() {
             <div className="w-8 h-px bg-white/30"></div>
           </div>
           <h2 className="fade-in-element opacity-0 translate-y-8 transition-all duration-1000 ease-out text-5xl md:text-6xl lg:text-7xl font-light text-white mb-8 tracking-tight text-balance">
-            The businesses we <span className="font-medium italic">empower</span>
+          What Our Customers Are <span className="font-medium italic">Saying</span>
           </h2>
           <p className="fade-in-element opacity-0 translate-y-8 transition-all duration-1000 ease-out text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Discover how leading businesses are transforming their customer engagement with AI-powered chat solutions
+            Homeowners across St. Augustine trust us to keep their properties clean and looking like new
+          </p>
+          <p
+            className="fade-in-element opacity-0 translate-y-8 transition-all duration-1000 ease-out mt-10 text-center text-amber-200/90 text-sm font-medium tracking-wide"
+            aria-label="Five star rated local service"
+          >
+            <span aria-hidden className="mr-2 select-none">
+              ⭐️⭐️⭐️⭐️⭐️
+            </span>
+            5-Star Rated Local Service
           </p>
         </div>
 
