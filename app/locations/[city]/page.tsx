@@ -55,7 +55,7 @@ export default async function LocationPage({ params }: Props) {
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${SITE_URL}/#business`,
     name: "St. Augustine Pressure Washing Pros",
     telephone: "+1-904-234-5678",
@@ -81,6 +81,31 @@ export default async function LocationPage({ params }: Props) {
     })),
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Locations",
+        item: `${SITE_URL}/locations`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: location.city,
+        item: `${SITE_URL}/locations/${location.slug}`,
+      },
+    ],
+  }
+
   return (
     <>
       <script
@@ -90,6 +115,10 @@ export default async function LocationPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <LocationPageContent
         location={location}

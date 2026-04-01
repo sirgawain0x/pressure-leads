@@ -1,11 +1,14 @@
 const SITE_URL = "https://www.staugustinepressurewashingpros.com"
 
+// TODO: Verify phone number 904-234-5678 — currently assumed placeholder
+const PHONE = "+1-904-234-5678"
+
 const localBusiness = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   "@id": `${SITE_URL}/#business`,
   name: "St. Augustine Pressure Washing Pros",
-  telephone: "+1-904-234-5678",
+  telephone: PHONE,
   url: SITE_URL,
   image: `${SITE_URL}/images/before_after/home.png`,
   priceRange: "$$",
@@ -15,6 +18,18 @@ const localBusiness = {
     opens: "00:00",
     closes: "23:59",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 29.8946,
+    longitude: -81.3145,
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "St. Augustine",
+    addressRegion: "FL",
+    postalCode: "32080",
+    addressCountry: "US",
+  },
   areaServed: [
     { "@type": "City", name: "St. Augustine" },
     { "@type": "City", name: "Jacksonville" },
@@ -23,6 +38,44 @@ const localBusiness = {
     { "@type": "City", name: "St. Augustine Beach" },
     { "@type": "City", name: "Palm Coast" },
   ],
+}
+
+const organization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "St. Augustine Pressure Washing Pros",
+  url: SITE_URL,
+  logo: `${SITE_URL}/Pressurewash_logo.svg`,
+  telephone: PHONE,
+  sameAs: [
+    // TODO: Add real social profile URLs when available
+    // "https://www.facebook.com/staugustinepressurewashingpros",
+    // "https://www.instagram.com/staugustinepressurewashingpros",
+    // "https://www.youtube.com/@staugustinepressurewashingpros",
+    // "https://www.linkedin.com/company/staugustinepressurewashingpros",
+    // "https://g.page/staugustinepressurewashingpros" // Google Business Profile
+  ],
+}
+
+const webSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "St. Augustine Pressure Washing Pros",
+  url: SITE_URL,
+  publisher: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 }
 
 const services = [
@@ -148,6 +201,14 @@ export function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
       />
       {serviceSchemas.map((schema, i) => (
         <script

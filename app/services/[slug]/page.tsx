@@ -41,6 +41,89 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+const howToSchemas: Record<string, object> = {
+  "driveway-cleaning": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How We Pressure Wash Your Driveway",
+    description:
+      "Our professional driveway pressure washing process removes oil stains, dirt, and algae buildup to restore your driveway.",
+    totalTime: "PT2H",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Surface Inspection",
+        text: "We inspect the driveway surface material (concrete, pavers, or brick) and identify stain types including oil, algae, and tire marks.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Pre-Treatment",
+        text: "Oil stains and organic growth are pre-treated with eco-friendly cleaning solutions to break down tough buildup before washing.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Pressure Washing",
+        text: "Using commercial-grade pressure washers with calibrated settings for your surface type, we strip away years of dirt and stains without damaging the driveway.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Edge & Joint Detailing",
+        text: "We pay special attention to expansion joints and edges where dirt accumulates, ensuring a uniformly clean finish.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 5,
+        name: "Final Rinse & Inspection",
+        text: "A thorough rinse and final inspection ensures the entire surface is clean and free of residue. For pavers, we can re-sand joints to prevent weed growth.",
+      },
+    ],
+  },
+  "house-washing": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How We Soft Wash Your Home's Exterior",
+    description:
+      "Our safe house washing process removes mold, mildew, and grime from siding and exterior surfaces without damage.",
+    totalTime: "PT3H",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Exterior Assessment",
+        text: "We assess your home's siding material (vinyl, stucco, brick, or wood) and note areas with heavy mold, mildew, or algae growth.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Protect Landscaping & Fixtures",
+        text: "Plants, outdoor furniture, and light fixtures near the work area are covered or moved to prevent any overspray contact.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Apply Cleaning Solution",
+        text: "A biodegradable cleaning solution is applied at low pressure to break down mold, mildew, and dirt on all exterior surfaces.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Gentle Soft Wash Rinse",
+        text: "Using controlled low-pressure rinsing, we remove all loosened contaminants without damaging siding, paint, or caulking.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 5,
+        name: "Detail & Final Walkthrough",
+        text: "We detail around windows, doors, and trim, then do a walkthrough with the homeowner to ensure complete satisfaction.",
+      },
+    ],
+  },
+}
+
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params
   const service = getServiceBySlug(slug)
@@ -83,6 +166,33 @@ export default async function ServicePage({ params }: Props) {
     })),
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${SITE_URL}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.name,
+        item: `${SITE_URL}/services/${service.slug}`,
+      },
+    ],
+  }
+
+  const howToSchema = howToSchemas[service.slug] ?? null
+
   return (
     <>
       <script
@@ -93,6 +203,16 @@ export default async function ServicePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      )}
       <ServicePageContent service={service} otherServices={otherServices} />
     </>
   )

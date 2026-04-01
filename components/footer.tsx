@@ -2,7 +2,7 @@
 import type React from "react"
 import type { ComponentProps, ReactNode } from "react"
 import { motion, useReducedMotion } from "framer-motion"
-import { FacebookIcon, Instagram, LinkedinIcon, Youtube } from "lucide-react"
+import { FacebookIcon, Instagram, LinkedinIcon, Phone, Youtube } from "lucide-react"
 import Image from "next/image"
 
 interface FooterLink {
@@ -45,6 +45,8 @@ const footerLinks: FooterSection[] = [
     links: [
       { title: "About", href: "/about" },
       { title: "Testimonials", href: "/#testimonials" },
+      // TODO: Verify phone number 904-234-5678 — currently assumed placeholder
+      { title: "(904) 234-5678", href: "tel:+19042345678", icon: Phone },
       { title: "Sun\u2013Sat \u00b7 24 hours" },
     ],
   },
