@@ -2,7 +2,7 @@
 import type React from "react"
 import type { ComponentProps, ReactNode } from "react"
 import { motion, useReducedMotion } from "framer-motion"
-import { FacebookIcon, Instagram, LinkedinIcon, Youtube } from "lucide-react"
+import { FacebookIcon, Instagram, LinkedinIcon, Phone, Youtube } from "lucide-react"
 import Image from "next/image"
 
 interface FooterLink {
@@ -21,36 +21,33 @@ const footerLinks: FooterSection[] = [
   {
     label: "Services",
     links: [
-      { title: "House Washing", href: "/#features" },
-      { title: "Driveway Cleaning", href: "/#features" },
-      { title: "Roof Cleaning", href: "/#features" },
-      { title: "Patio & Deck Cleaning", href: "/#features" },
+      { title: "House Washing", href: "/services/house-washing" },
+      { title: "Driveway Cleaning", href: "/services/driveway-cleaning" },
+      { title: "Roof Soft Wash", href: "/services/roof-soft-wash" },
+      { title: "Patio & Deck", href: "/services/patio-deck-cleaning" },
+      { title: "Fence Cleaning", href: "/services/fence-cleaning" },
+      { title: "Commercial", href: "/services/commercial-pressure-washing" },
+    ],
+  },
+  {
+    label: "Service Areas",
+    links: [
+      { title: "Jacksonville", href: "/locations/jacksonville" },
+      { title: "Jacksonville Beach", href: "/locations/jacksonville-beach" },
+      { title: "Ponte Vedra", href: "/locations/ponte-vedra" },
+      { title: "Palm Coast", href: "/locations/palm-coast" },
+      { title: "St. Augustine Beach", href: "/locations/st-augustine-beach" },
+      { title: "St. Augustine", href: "/locations/st-augustine" },
     ],
   },
   {
     label: "Company",
     links: [
-      { title: "About", href: "/#about" },
+      { title: "About", href: "/about" },
       { title: "Testimonials", href: "/#testimonials" },
-      
-    ],
-  },
-  {
-    label: "Contact",
-    links: [
-      {
-        title: "Service areas (St. Augustine, St. Johns, & more)",
-        href: "/#contact",
-      },
-      // {
-      //   title: "+1 (888) 859-9912",
-      //   href: "tel:+18888599912",
-      // },
-      // {
-      //   title: "hello@pressureleads.com",
-      //   href: "mailto:hello@pressureleads.com",
-      // },
-      { title: "Sun–Sat · 24 hours" },
+      // TODO: Verify phone number 904-234-5678 — currently assumed placeholder
+      { title: "(904) 234-5678", href: "tel:+19042345678", icon: Phone },
+      { title: "Sun\u2013Sat \u00b7 24 hours" },
     ],
   },
   {
