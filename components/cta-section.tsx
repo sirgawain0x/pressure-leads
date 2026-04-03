@@ -60,15 +60,6 @@ export function CTASection({ onQuoteClick }: CTASectionProps) {
               </button>
             </div>
 
-            {/* <p className="text-sm md:text-base text-white/85">
-              Or call now:{" "}
-              <a
-                href="tel:+18888599912"
-                className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white transition-colors"
-              >
-                +1 (888) 859-9912
-              </a>
-            </p> */}
 
             <div className="w-full max-w-md mx-auto pt-4 border-t border-white/15 space-y-2.5 text-center">
               <p className="text-sm text-white/90 font-medium tracking-wide">

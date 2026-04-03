@@ -58,7 +58,7 @@ export default async function LocationPage({ params }: Props) {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${SITE_URL}/#business`,
     name: "St. Augustine Pressure Washing Pros",
-    telephone: "+1-904-234-5678",
+    telephone: "+1-904-373-8072",
     url: SITE_URL,
     image: `${SITE_URL}/images/before_after/home.png`,
     priceRange: "$$",

@@ -306,7 +306,7 @@ export function AITeamSection() {
                             />
                             <div className="flex-1">
                               <h3 className="font-semibold text-sm">Atlas - Sales Agent</h3>
-                              <p className="text-xs text-slate-300">Chat with 904 234 5678</p>
+                              <p className="text-xs text-slate-300">Chat with us anytime</p>
                             </div>
                             <div className="text-xs text-green-400 flex items-center gap-1">
                               <div className="w-2 h-2 bg-green-400 rounded-full"></div>

@@ -33,7 +33,7 @@ export default function AboutPage() {
     "@id": `${SITE_URL}/#business`,
     name: "St. Augustine Pressure Washing Pros",
     url: SITE_URL,
-    telephone: "+1-904-234-5678",
+    telephone: "+1-904-373-8072",
     image: `${SITE_URL}/Pressurewash_logo.svg`,
     priceRange: "$$",
     description:
