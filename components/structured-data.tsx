@@ -1,7 +1,6 @@
 const SITE_URL = "https://www.staugustinepressurewashingpros.com"
 
-// TODO: Verify phone number 904-234-5678 — currently assumed placeholder
-const PHONE = "+1-904-234-5678"
+const PHONE = "+1-904-373-8072"
 
 const localBusiness = {
   "@context": "https://schema.org",
